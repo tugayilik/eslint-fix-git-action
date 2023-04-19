@@ -7,8 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Fixes eslint issues on changed files only
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
       - name: Annotate PR
-        uses: tugayilik/PR-metadata-action@master
+        uses: ../../dist/index.js
         with:
           owner: ${{ github.repository_owner }}
           repo: ${{ github.event.repository.name }}
