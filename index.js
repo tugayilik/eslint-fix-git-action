@@ -19,7 +19,7 @@ const main = async () => {
             changes: 0
         };
 
-        console.log(changedFiles);
+        console.log(changedFiles, diffData);
 
     } catch (error) {
         core.setFailed(error.message);
