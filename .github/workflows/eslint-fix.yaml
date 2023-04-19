@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
-      - name: Annotate PR
+      - name: Fix eslint mistakes
         uses: tugayilik/eslint-fix-git-action@master
         with:
           owner: ${{ github.repository_owner }}
