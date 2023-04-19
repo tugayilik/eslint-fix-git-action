@@ -10,7 +10,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
       - name: Annotate PR
-        uses: ../../dist/index.js
+        uses: tugayilik/eslint-fix-git-action@master
         with:
           owner: ${{ github.repository_owner }}
           repo: ${{ github.event.repository.name }}
