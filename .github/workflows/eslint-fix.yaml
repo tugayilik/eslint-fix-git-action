@@ -1,0 +1,16 @@
+name: Eslint Fix
+
+on: [push, pull_request]
+
+jobs:
+  eslint-fix-commit:
+    runs-on: ubuntu-latest
+    name: Fixes eslint issues on changed files only
+    steps:
+      - name: Annotate PR
+        uses: tugayilik/PR-metadata-action@master
+        with:
+          owner: ${{ github.repository_owner }}
+          repo: ${{ github.event.repository.name }}
+          pr_number: ${{ github.event.number }}
+          token: ${{ secrets.GITHUB_TOKEN }}
